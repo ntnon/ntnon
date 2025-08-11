@@ -3,6 +3,17 @@ My name is Anton and I am a Norwegian PhD student!
 
 I prefer minimal code with few dependencies and I like learning new technologies to overcome small or large problems!
 
+Some technologies I am currently interested in:
+- [Raylib](https://github.com/raysan5/raylib)
+- [Clay](https://github.com/nicbarker/clay)
+- [Typst](https://typst.app/)
+- [Zed](https://zed.dev/)
+- [Obsidian](https://obsidian.md/)
+
+Some programming influencer that inspire me:
+- [Sylvan Franklin](https://sylvanfranklin.com/)
+- [Nic Barker](https://www.nicbarker.com/)
+
 ### Research
 My research lies at the intersection of data science and medicine. I focus on identifying digital biomarkers in patients with Lewy Body Dementia, aiming to leverage technology to improve diagnosis and patient outcomes.
 
