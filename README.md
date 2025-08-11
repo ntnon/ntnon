@@ -24,4 +24,4 @@ Right now, I’m diving into C programming and game design — excited to build 
 
 ---
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact)
