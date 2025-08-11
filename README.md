@@ -1,10 +1,12 @@
 ## Hi there 👋
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact&theme=radical)
 My name is Anton and I am a Norwegian PhD student!
 
+# Research
 My research lies at the intersection of data science and medicine. I focus on identifying digital biomarkers in patients with Lewy Body Dementia, aiming to leverage technology to improve diagnosis and patient outcomes.
 
 On another note: I am currently learning C and game design
+
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact&theme=radical)
 
 
 
