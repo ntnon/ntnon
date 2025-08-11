@@ -1,6 +1,8 @@
 ## Hi there 👋
 My name is Anton and I am a Norwegian PhD student!
 
+I prefer minimal code with few dependencies
+
 ### Research
 My research lies at the intersection of data science and medicine. I focus on identifying digital biomarkers in patients with Lewy Body Dementia, aiming to leverage technology to improve diagnosis and patient outcomes.
 
