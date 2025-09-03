@@ -14,7 +14,8 @@ Here are some cool tools and projects that have caught my interest lately:
 ### Inspirations  
 Some programming minds who inspire me:  
 - [Sylvan Franklin](https://sylvanfranklin.com/)  
-- [Nic Barker](https://www.nicbarker.com/)  
+- [Nic Barker](https://www.nicbarker.com/)
+- [Kenneth Ward](https://www.youtube.com/@IncandescentGames)
 
 ### Research Focus  
 My work sits at the crossroads of data science and medicine, with a focus on identifying digital biomarkers in patients with Lewy Body Dementia. My goal is to harness technology to improve diagnosis and patient care.
