@@ -32,6 +32,8 @@ Right now, I’m diving into C programming and game design — excited to build 
 
 2023, [FIND-A-PEP](https://ntnon.github.io/FIND-A-PEP/)
 
+2020, [Binary Adder in Line Rider (video)](https://www.youtube.com/watch?v=MrLgT09u69Y)
+
 ---
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact)
