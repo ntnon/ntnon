@@ -26,3 +26,8 @@ Right now, I’m diving into C programming and game design — excited to build 
 ---
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact)
+
+2024 [Web-Cog](https://web-cog.vercel.app/)
+2025 [Flowers](https://flower-wine.vercel.app/)
+2023 [Blackbrew](https://ntnon.github.io/blackbrew/)
+2023 [FIND-A-PEP](https://ntnon.github.io/FIND-A-PEP/)
