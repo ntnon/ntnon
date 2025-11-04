@@ -1,42 +1,59 @@
-# This workflow builds a list of your starred repositories
-name: Stargazer
+name: Update Starred Repos
 
 on:
   schedule:
-    - cron: '0 0 * * *'
-
+    - cron: '0 0 * * *'  # once per day
   workflow_dispatch:
 
 jobs:
-  build:
+  update-stars:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-      # Generate the list
-      - name: Create star list
-        id: stargazer
+      # Generate the starred list into a temporary file
+      - name: Generate starred list
         uses: rverst/stargazer@v1.2.6
+        id: stargazer
         with:
           github-user: ${{ github.actor }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          list-file: "README.md"
-          list-section-start: "<!-- STARS START HERE -->"
-          list-section-end: "<!-- STARS END HERE -->"
+          list-file: "STARLIST.md"   # temporary output
+          format: "list"
+          with-stars: true
 
-      # Commit the changes
-      - name: Commit files
+      # Replace the section between markers in README.md
+      - name: Update README with starred list
         run: |
-          git config --local user.email "actions@noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add .
-          git commit -m "Update list"
+          START_MARKER="<!-- STARS START HERE -->"
+          END_MARKER="<!-- STARS END HERE -->"
 
-      # Push the changes
-      - name: Push
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref }}
+          # Split README into before, replace, after
+          awk -v start="$START_MARKER" -v end="$END_MARKER" '
+            $0 ~ start {print; flag=1; next}
+            $0 ~ end {flag=0; print; next}
+            flag==0 {print}
+          ' README.md > tmp_before.md
+
+          # Write before marker, then append STARLIST.md, then after marker
+          awk -v start="$START_MARKER" -v end="$END_MARKER" '{
+            if ($0 ~ start) {flag=1; print; next}
+            if ($0 ~ end) {flag=0; print; next}
+            if (flag==0) print
+          }' README.md | head -n -1 > tmp_after.md
+
+          # Merge all
+          cat tmp_before.md STARLIST.md tmp_after.md > README.tmp.md
+          mv README.tmp.md README.md
+          rm tmp_before.md tmp_after.md STARLIST.md
+
+      # Commit and push changes
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "actions@noreply.github.com"
+          git add README.md
+          git commit -m "Update starred repos" || echo "No changes to commit"
+          git push
