@@ -1,0 +1,27 @@
+name: Update Starred Repos List
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # once per day
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Fetch starred repos and update README
+        uses: amitmerchant1990/starred-repo-readme@v1.1.0
+        with:
+          GH_USERNAME: ntnon
+          START_COMMENT: "<!-- START_STARS -->"
+          END_COMMENT: "<!-- END_STARS -->"
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add README.md
+          git commit -m "Update starred repos" || echo "No changes"
+          git push
