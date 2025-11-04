@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+        with:
+          ref: main
 
       # Generate the starred list into a temporary file
       - name: Generate starred list
