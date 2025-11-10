@@ -6,10 +6,8 @@ I believe in writing clean, minimal code with as few dependencies as possible—
 ### Currently Exploring  
 Here are some cool tools and projects that have caught my interest lately:  
 
-### ⭐ My Recent Starred Repos
-
-<!-- START_STARS -->
-<!-- END_STARS -->
+### Currently Exploring  
+Here are some cool tools and projects that have caught my interest lately:  
 
 - [Raylib](https://github.com/raysan5/raylib) — Simple and easy-to-use game programming library  
 - [Clay](https://github.com/nicbarker/clay) — High performance UI layout library in C
