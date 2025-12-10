@@ -19,6 +19,3 @@ Some programming minds who inspire me:
 
 ---
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=ntnon&layout=compact)
-
-
