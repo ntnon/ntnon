@@ -1,11 +1,6 @@
 ## Hi there! 👋  
 I’m Anton, a Norwegian software engineer.
 
-I believe in writing clean, minimal code with as few dependencies as possible—and I love exploring new technologies to solve problems big and small.
-
-### Currently Exploring  
-Here are some cool tools and projects that have caught my interest lately:  
-
 ### Currently Exploring  
 Here are some cool tools and projects that have caught my interest lately:  
 - [Arch Linux](https://archlinux.org/)
